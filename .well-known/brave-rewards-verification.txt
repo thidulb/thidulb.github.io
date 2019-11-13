@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: thidulb.github.io 
-Token: 7c6546240dc4711fee72fa3fa69d8a5660c92713ab5bfc2b72ea6df6ac72c8af
