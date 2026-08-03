@@ -1,50 +1,580 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiago Duarte - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo"><span>~/</span>thidu.dev</div>
+      <ul class="nav-center">
+        <li><a href="#skills" data-i18n="nav.skills">skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">projetos</a></li>
+        <li>
+          <a href="#experience" data-i18n="nav.experience">experiência</a>
+        </li>
+        <li><a href="#contact" data-i18n="nav.contact">contato</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btn-pt" onclick="setLang('pt')">
+            PT
+          </button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">
+            EN
+          </button>
+        </div>
+      </div>
+    </nav>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-inner">
+        <div>
+          <p class="hero-eyebrow" data-i18n="hero.eyebrow">
+            Full Stack Developer
+          </p>
+          <h1>
+            <span class="typewriter-line" id="tw-greeting"></span>
+            <span class="typewriter-line" id="tw-name"></span>
+          </h1>
+          <p class="hero-sub" data-i18n="hero.sub">
+            Construo produtos digitais com código limpo e boas práticas.
+            Apaixonado por performance, UX e arquiteturas que escalam de
+            verdade.
+          </p>
+          <div class="hero-tags">
+            <span class="tag">TypeScript</span><span class="tag">React</span>
+            <span class="tag">Node.js</span><span class="tag">Python</span>
+            <span class="tag">Docker</span><span class="tag">AWS</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1"
+              >ver projetos
+            </a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2"
+              >entrar em contato
+            </a>
+          </div>
+        </div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="terminal-title">thidu — zsh</span>
+          </div>
+          <div class="terminal-body">
+            <div>
+              <span class="t-prompt">thidu@dev</span>
+              <span class="t-cmd">~</span>
+              <span class="t-comment"># whoami</span>
+            </div>
+            <div>&nbsp;</div>
+            <div>
+              <span class="t-key">const</span> <span class="t-cmd">dev</span> =
+              {
+            </div>
+            <div>
+              &nbsp; <span class="t-key">name</span>:
+              <span class="t-str">"Thiago Duarte"</span>,
+            </div>
+            <div>
+              &nbsp; <span class="t-key">role</span>:
+              <span class="t-str">"Full Stack Dev"</span>,
+            </div>
+            <div>
+              &nbsp; <span class="t-key">exp</span>:
+              <span class="t-val">5</span>,<span class="t-comment">
+                // years</span
+              >
+            </div>
+            <div>
+              &nbsp; <span class="t-key">available</span>:
+              <span class="t-val">true</span>,
+            </div>
+            <div>
+              &nbsp; <span class="t-key">coffee</span>:
+              <span class="t-str">"☕️ mandatory"</span>
+            </div>
+            <div>};</div>
+            <div>&nbsp;</div>
+            <div>
+              <span class="t-prompt">thidu@dev</span>
+              <span class="t-cmd">~</span> █
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="/index.css" rel="stylesheet">
-    
-    <!--thidu.dev logo style-->
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-    </style>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-label" data-i18n="skills.label">// habilidades</p>
+        <h2>Tech <span class="accent">Stack</span></h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML"
+              />
+              <span class="skill-name">HTML</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS"
+              />
+              <span class="skill-name">CSS</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+              />
+              <span class="skill-name">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+              <span class="skill-name">TypeScript</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+              />
+              <span class="skill-name">React / Next.js</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+              />
+              <span class="skill-name">Node.js</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                alt="C#"
+              />
+              <span class="skill-name">C#</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                alt=".NET"
+              />
+              <span class="skill-name">.NET</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+              />
+              <span class="skill-name">Python</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="PostgreSQL"
+              />
+              <span class="skill-name">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                alt="SQL Server"
+              />
+              <span class="skill-name">SQL Server</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                alt="Docker"
+              />
+              <span class="skill-name">Docker</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                alt="AWS"
+              />
+              <span class="skill-name">AWS</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <img
+                class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                alt="Azure"
+              />
+              <span class="skill-name">Azure</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <span class="skill-icon"
+                ><img
+                  class="skill-icon"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  alt="Git" /></span
+              ><span class="skill-name">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <title>Thiago Duarte - Portfólio</title>
-</head>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label" data-i18n="projects.label">// projetos</p>
+        <h2>
+          <span data-i18n="projects.title">O que já</span>
+          <span class="accent" data-i18n="projects.titleAccent">construí</span>
+        </h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                class="project-icon"
+                src="assets/sudoku.png"
+                alt="Sudoku App"
+                height="32"
+              />
 
-<body>
+              <div class="project-links">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.thidu.sudoku"
+                  class="project-link"
+                  >Google Play
+                </a>
+                <span class="status-dot status-dot-red" title="Offline"></span>
+              </div>
+            </div>
+            <div class="project-title">Sudoku App</div>
+            <div class="project-desc" data-i18n="projects.sudoku">
+              Um aplicativo de sudoku, anotações, dicas, apagar, desfazer,
+              contador de tempo, indicações de erros e quantidade de números
+              faltando.
+            </div>
+            <div class="project-stack">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+              <span class="project-tag">Admob</span>
+              <span class="project-tag">IAP</span>
+            </div>
+          </div>
 
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="navbar">
-                <!-- Navbar content -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dropdown">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="/">thidu.dev</a>
-        
-                <div class="collapse navbar-collapse " id="dropdown">   
-                    <a class="btn btn-outline-light ml-sm-2 roadmap" href="projetos">Projetos</a>
-                </div>
-            </nav>
-    <div align="center">
-        <img class="img-profile" src="https://bit.ly/thidudev" alt="Avatar" style="width:200px">
-        <h2>Thiago Duarte</h2>
-        <p>Estudante de Engenharia Mecatrônica e apaixonado em programação</p>
-        <p>(Site em desenvolvimento)</p>
-    </div>
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                class="project-icon"
+                src="assets/quarenflix.png"
+                alt="Quarenflix"
+                height="32"
+              />
 
-    <div class="images" align="center">
-        <img src="./images/Nodejs.svg" title="Node.js" width="128px">
-        <img src="./images/React.svg" title="React" width="176px">
-        <img src="./images/React Native.svg" title="React Native" width="128px">
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+              <div class="project-links">
+                <a href="https://quarenflix.thidu.dev/" class="project-link"
+                  >Site
+                </a>
+                <span class="status-dot status-dot-green" title="Online"></span>
+              </div>
+            </div>
+            <div class="project-title">Quarenflix</div>
+            <div class="project-desc" data-i18n="projects.quarenflix">
+              Um gerenciador de filmes e séries com controle do que já foi
+              assistido, assistindo e ainda será lançado. Login via discord e
+              integração com a API do TMDB para informações.
+            </div>
+            <div class="project-stack">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Supabase</span>
+            </div>
+          </div>
 
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                class="project-icon"
+                src="assets/nazasongs.png"
+                alt="Nazasongs"
+                height="32"
+              />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/thidulb/NazaSongs"
+                  class="project-link"
+                  >Github
+                </a>
+                <a href="https://nazasongs.thidu.dev" class="project-link"
+                  >Site
+                </a>
+                <span class="status-dot status-dot-red" title="Offline"></span>
+              </div>
+            </div>
+            <div class="project-title">Nazasongs</div>
+            <div class="project-desc" data-i18n="projects.nazasongs">
+              Um bot de discord que toca músicas do YouTube, Spotify e
+              Soundcloud em canais de voz.
+            </div>
+            <div class="project-stack">
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">Discord.js</span>
+              <span class="project-tag">Moonlink.js</span>
+              <span class="project-tag">NodeLink</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <p class="section-label" data-i18n="exp.label">// experiência</p>
+        <h2>
+          <span data-i18n="exp.title">Onde já</span>
+          <span class="accent" data-i18n="exp.titleAccent">trabalhei</span>
+        </h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date" data-i18n="exp.job3.date">
+              Jan 2022 - Dez 2024
+            </div>
+            <div class="tl-role">Jr Full Stack Developer</div>
+            <div class="tl-company">Prodam</div>
+            <div class="tl-desc" data-i18n="exp.job3.desc">
+              • Desenvolvimento de uma Central de Notificação, na parte de
+              back-end foram utilizados .NET 8.0 e Swagger, para o front-end era
+              utilizado um framework moderno Next.js do React (Tailwind para
+              estilização), projeto todo estruturado para rodar em container com
+              Docker/Docker Compose e banco de dados MySQL. • Implementação de
+              login no sistema WiFi Livre SP pela integração de contas Google,
+              Apple e ID Sampa, utilizando PHP e o framework Hybridauth. •
+              Projetos GDP e NGDS para gestão de demandas/projetos e controle do
+              tempo alocado neles. Sistemas com integrações entre si, .NET para
+              back-end, Vue com Vuetify para front-end. • Projeto Eleições, api
+              back-end construída em Python, 2 aplicações front-end, ambas
+              utilizando Vue com Vuetify, uma para gerenciamento da eleição e a
+              outra para votação.
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date" data-i18n="exp.job2.date">
+              Jul 2020 - Dez 2021
+            </div>
+            <div class="tl-role" data-i18n="exp.job2.role">
+              Estagiário Full Stack Developer
+            </div>
+            <div class="tl-company">Prodam</div>
+            <div class="tl-desc" data-i18n="exp.job2.desc">
+              • Desenvolvimento do novo Portal Transparência SP utilizando
+              tecnologias como Wordpress, PHP, HTML, Javascript, CSS e SQL
+              Server, utilizando também um framework para exibição de gráficos o
+              FusionCharts. • Automação de testes de um projeto interno de
+              Eleições utilizando Node.js e Selenium WebDriver.
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date" data-i18n="exp.job1.date">
+              Nov 2018 - Abr 2019
+            </div>
+            <div class="tl-role">Trainee</div>
+            <div class="tl-company">Automate Brasil</div>
+            <div class="tl-desc" data-i18n="exp.job1.desc">
+              Automação de processos robóticos, (tarefas repetitivas de um
+              usuário) utilizando a ferramenta Automate, atuado no Banco PAN
+              como cliente.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <p class="section-label" data-i18n="contact.label">// contato</p>
+        <h2>
+          <span data-i18n="contact.title">Vamos</span>
+          <span class="accent" data-i18n="contact.titleAccent">conversar?</span>
+        </h2>
+        <p class="contact-sub" data-i18n="contact.sub">
+          Aberto a oportunidades, freelas e papos sobre tecnologia.
+        </p>
+        <div class="contact-links">
+          <a
+            href="https://linkedin.com/in/thidu/"
+            class="contact-link"
+            target="_blank"
+            >💼 LinkedIn</a
+          >
+          <a
+            href="https://github.com/thidulb"
+            class="contact-link"
+            target="_blank"
+            >🐙 GitHub</a
+          >
+          <a href="mailto:thidu.dev@gmail.com" class="contact-link"
+            >📧 thidu.dev@gmail.com</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>// built with ❤️ &amp; ☕ by Thiago Duarte · 2026</span>
+    </footer>
+
+    <script type="module">
+      import translations from "./i18n.js";
+
+      /* ── Typewriter ── */
+      let twTimer = null;
+
+      function typewriterRender(greeting, name) {
+        if (twTimer) clearTimeout(twTimer);
+        const greetEl = document.getElementById("tw-greeting");
+        const nameEl = document.getElementById("tw-name");
+        greetEl.innerHTML = "";
+        nameEl.innerHTML = "";
+
+        // Build name HTML: first word accent-colored, rest plain
+        const nameParts = name.split(" ");
+        const nameHTML = `<span class="accent">${nameParts[0]}</span> ${nameParts.slice(1).join(" ")}`;
+
+        const fullGreeting = greeting;
+        let gi = 0,
+          ni = 0,
+          phase = 0;
+
+        function tick() {
+          if (phase === 0) {
+            // typing greeting
+            if (gi <= fullGreeting.length) {
+              greetEl.innerHTML =
+                fullGreeting.slice(0, gi) +
+                '<span class="typewriter-cursor"></span>';
+              gi++;
+              twTimer = setTimeout(
+                tick,
+                gi === fullGreeting.length + 1 ? 400 : 55,
+              );
+            } else {
+              greetEl.innerHTML = fullGreeting; // remove cursor from line 1
+              phase = 1;
+              twTimer = setTimeout(tick, 0);
+            }
+          } else {
+            // typing name — render progressively by char count across the HTML
+            const plainName = name; // use plain text for counting
+            if (ni <= plainName.length) {
+              // slice plain chars but render first word as accent
+              const slice = plainName.slice(0, ni);
+              const sliceParts = slice.split(" ");
+              let rendered = "";
+              if (sliceParts.length === 1) {
+                rendered = `<span class="accent">${sliceParts[0]}</span>`;
+              } else {
+                rendered = `<span class="accent">${sliceParts[0]}</span> ${sliceParts.slice(1).join(" ")}`;
+              }
+              nameEl.innerHTML =
+                rendered + '<span class="typewriter-cursor"></span>';
+              ni++;
+              twTimer = setTimeout(tick, 65);
+            } else {
+              nameEl.innerHTML =
+                nameHTML + '<span class="typewriter-cursor"></span>';
+              // cursor stays blinking — done
+            }
+          }
+        }
+        tick();
+      }
+
+      function setLang(lang) {
+        const t = translations[lang];
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (t[key] !== undefined) el.innerHTML = t[key];
+        });
+
+        document
+          .getElementById("btn-pt")
+          .classList.toggle("active", lang === "pt");
+        document
+          .getElementById("btn-en")
+          .classList.toggle("active", lang === "en");
+        document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+
+        typewriterRender(t["hero.greeting"], t["hero.name"]);
+      }
+
+      /* ── Init ── */
+      setLang("pt");
+
+      // Expor funções globalmente para onclick handlers
+      window.setLang = setLang;
+    </script>
+  </body>
 </html>

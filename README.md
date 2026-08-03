@@ -1,4 +1,5 @@
+# thidu.dev
 
-Repositório para hospedagem da minha página pessoal
+Repositório pessoal do portfólio de **Thiago Duarte**.
 
-Acesse https://thidu.dev
+🔗 [thidu.dev](https://thidu.dev)
